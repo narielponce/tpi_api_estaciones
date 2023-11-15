@@ -3,6 +3,7 @@ package ar.edu.utn.frc.API_Estacion.controllers;
 import ar.edu.utn.frc.API_Estacion.dtos.AddNuevaEstacionDTO;
 import ar.edu.utn.frc.API_Estacion.dtos.EstacionDTO;
 import ar.edu.utn.frc.API_Estacion.services.EstacionService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@Api(tags = "EstacionController", description = "Listado de articulos")
 class EstacionController {
     @Autowired
     EstacionService estacionService;
